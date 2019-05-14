@@ -15,3 +15,10 @@ void delay_MS(unsigned long delay){
 		}
 	}
 }
+void delay_US(unsigned long delay){
+SysTick_Init();	// delay is in 12.5ns units
+NVIC_ST_RELOAD_R = (80*delay)-1; // number of counts to wait
+NVIC_ST_CURRENT_R = 0; // any value written to CURRENT clears
+while((NVIC_ST_CTRL_R&0x00010000)==0){ // wait for count flag
+}
+}
