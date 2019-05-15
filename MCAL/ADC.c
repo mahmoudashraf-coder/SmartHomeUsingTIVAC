@@ -1,4 +1,4 @@
-#include "tm4c123gh6pm.h"
+#include "..\tm4c123gh6pm.h"
 #include "GPIO.h"
 void WTIMER_Init(uint16_t trigger)
 {

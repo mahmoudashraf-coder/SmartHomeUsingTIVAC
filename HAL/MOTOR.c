@@ -1,4 +1,6 @@
 #include "MOTOR.h"
+#include "..\MCAL\TIMER.h"
+#include "..\MCAL\GPIO.h"
 void Motor_Turn(char direction)
 {
 	if (direction == 0)
